@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF_Login.View.ClientesPage"
+             NavigationPage.HasBackButton="True"
+             Title="Apartado de Clientes"
+             BackgroundColor="#FFE5B4">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Bienvenido!" FontSize="Large"/>
+            <Entry x:Name="txtId" Placeholder=" ID (Solo números)" Keyboard="Numeric"></Entry>
+            <Entry x:Name="txtName" Placeholder="Nombre del cliente"></Entry>
+            <Entry x:Name="txtNum" Placeholder="Numero de Compras Totales del Cliente" Keyboard="Numeric"></Entry>
+            <Entry x:Name="txtDireccion" Placeholder="Dirección"></Entry>
+            <StackLayout  HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                <Button x:Name="btnAdd"
+                        WidthRequest="200" 
+                        Text="Agregar" 
+                        TextColor="Black"
+                        BackgroundColor="#FECA74"
+                        BorderWidth="1.5"
+                        CornerRadius="50"
+                        Clicked="BtnAdd_Clicked"/>
+                <Button x:Name="btnRetrive" 
+                        WidthRequest="200" 
+                        Text="Consultar" 
+                        TextColor="Black"
+                        BackgroundColor="#FECA74"
+                        BorderWidth="1.5"
+                        CornerRadius="50"
+                        Clicked="BtnRetrive_Clicked"/>
+            </StackLayout>
+            <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                <Button x:Name="btnUpdate" 
+                        WidthRequest="200" 
+                        Text="Actualizar" 
+                        TextColor="Black"
+                        BackgroundColor="#FECA74"
+                        BorderWidth="1.5"
+                        CornerRadius="50"
+                        Clicked="BtnUpdate_Clicked" />
+                <Button x:Name="btnDelete" 
+                        WidthRequest="200" 
+                        Text="Eliminar" 
+                        TextColor="Black"
+                        BackgroundColor="#FECA74"
+                        BorderWidth="1.5"
+                        CornerRadius="50"
+                        Clicked="BtnDelete_Clicked" />
+            </StackLayout>
+            <ListView x:Name="lstPersons">
+                <ListView.Header>
+                    <StackLayout Orientation="Horizontal" Margin="5,5,5,5">
+                        <Label Text="Id del Cliente" FontSize="Small" HorizontalOptions="CenterAndExpand"/>
+                        <Label Text="Nombre del Cliente" FontSize="Small" HorizontalOptions="CenterAndExpand"/>
+                    </StackLayout>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Margin="5,5,5,5">
+                                <Label Text="{Binding ClienteId}" FontSize="Medium" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+                                <Label Text="{Binding Cliente_N}" FontSize="Medium" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

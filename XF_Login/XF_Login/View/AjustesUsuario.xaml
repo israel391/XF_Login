@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF_Login.View.AjustesUsuario"
+             Title="Ajustes de Cuenta de Usuario"
+             NavigationPage.HasBackButton="True"
+             BackgroundColor="#78CF67">
+    <ContentPage.Content>
+        <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+            <Label Text="Configuración de la Cuenta del Usuario" FontSize="Large"/>
+            <Label Text="{Binding Email, StringFormat='Bienvenido {0}'}" Margin="10"/>
+            <Entry Text="{Binding Password}" IsPassword="True" Margin="5,5" Placeholder="Ingresa la nueva contraseña"/>
+            <Button x:Name="updatebtn" 
+                    Text="Cambiar contraseña"
+                    TextColor="Black"
+                    BackgroundColor="#FECA74"
+                    BorderWidth="1.5"
+                    CornerRadius="50"
+                    Command="{Binding UpdateCommand}" />
+            <Button x:Name="deletebtn" 
+                    Text="Eliminar cuenta" 
+                    TextColor="Black"
+                    BackgroundColor="#FECA74"
+                    BorderWidth="1.5"
+                    CornerRadius="50"
+                    Command="{Binding DeleteCommand}"/>
+            <Button x:Name="logoutbtn" 
+                    Text="Salir" 
+                    TextColor="Black"
+                    BackgroundColor="#FECA74"
+                    BorderWidth="1.5"
+                    CornerRadius="50"
+                    Command="{Binding LogoutCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

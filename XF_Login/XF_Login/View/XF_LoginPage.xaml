@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF_Login.View.XF_LoginPage"
+             Title="Inicio de Sesion"
+             BackgroundColor="#FECA74">
+    <ContentPage.Content>
+        
+        <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+
+            <Image Source="imagen1.png" WidthRequest="300" HeightRequest="250" IsVisible="True" Aspect="Fill"/>
+            <Entry x:Name = "Email" Placeholder = "Correo" Text="{Binding Email}"
+                   HeightRequest = "60"
+                   Keyboard = "Email"/>
+            <Entry x:Name = "Password" Text="{Binding Password}" Placeholder = "Contraseña"
+                   HeightRequest = "60"
+                   IsPassword = "True"/>
+            <Button x:Name= "loginbtn" 
+                    Text = "Entrar " 
+                    TextColor="Black"
+                    BackgroundColor="#78CF67"
+                    BorderWidth="1.5"
+                    CornerRadius="50"
+                    Command="{Binding LoginCommand}"
+                    HorizontalOptions = "FillAndExpand"/>
+            <Button x:Name="signup" 
+                    Text="Registrarse" 
+                    TextColor="Black"
+                    BackgroundColor="#78CF67"
+                    BorderWidth="1.5"
+                    CornerRadius="50"
+                    Command="{Binding SignUp}" 
+                    HorizontalOptions="End"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

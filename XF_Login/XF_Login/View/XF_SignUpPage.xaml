@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF_Login.View.XF_SignUpPage"
+             Title="Registro de Usuario"
+             BackgroundColor="#FFE5B4">
+    <ContentPage.Content>
+        <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+            <Image Source="imagen1.png" WidthRequest="300" HeightRequest="250" IsVisible="True" Aspect="Fill"/>
+            
+            <Entry x:Name="Emailentery" Placeholder="Correo" Text="{Binding Email}" Keyboard="Email"
+                 />
+            <Entry x:Name="passwordentery" Placeholder="Contraseña" Text="{Binding Password}" 
+                   IsPassword="True"/>
+            <Entry x:Name="cfmpasswordentery" Placeholder="Ingrese nuevamente la contraseña" Text="{Binding ConfirmPassword}" 
+                   IsPassword="True" />
+            <Button x:Name="signup" 
+                    Text="Finalizar Registro" 
+                    TextColor="Black"
+                    BackgroundColor="#78CF67"
+                    BorderWidth="1.5"
+                    CornerRadius="50"
+                    Command="{Binding SignUpCommand}" 
+                    HorizontalOptions="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

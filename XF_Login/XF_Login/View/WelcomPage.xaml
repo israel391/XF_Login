@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF_Login.View.WelcomPage"
+             Title="MENÚ"
+             NavigationPage.HasBackButton="True"
+             BackgroundColor="#FFE5B4">
+    <ContentPage.Content>
+        <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+            
+            <Image Source="imagen1.png" WidthRequest="300" HeightRequest="250" IsVisible="True" Aspect="Fill" VerticalOptions="CenterAndExpand"/>
+            <Button 
+                VerticalOptions="Center"
+                x:Name="btnClientesP" 
+                WidthRequest="200" 
+                Text="Ir al Apartado de Clientes"
+                TextColor="Black"
+                BackgroundColor="#FECA74"
+                BorderWidth="1.5"
+                CornerRadius="50"
+                Clicked="BtnClienteP_Clicked" />
+            
+            <Button 
+                VerticalOptions="Center"
+                x:Name="btnAjustesU" 
+                WidthRequest="200" 
+                Text="Configuración de la Cuenta del Usuario"
+                TextColor="Black"
+                BackgroundColor="#FECA74"
+                BorderWidth="1.5"
+                CornerRadius="50"
+                Clicked="BtnAjustesU_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
